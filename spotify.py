@@ -1,8 +1,8 @@
 import requests
 import base64
 import json
-SPOTIFY_CLIENT_ID = '87fd8a956ad845fdb8a3f71547ad1f94'
-SPOTIFY_CLIENT_SECRET = 'ec0034846f7749a4880a101b285ea7f3'
+SPOTIFY_CLIENT_ID = ''
+SPOTIFY_CLIENT_SECRET = ''
 
 def get_spotify_req_token():
     url = 'https://accounts.spotify.com/api/token'

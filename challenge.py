@@ -1,8 +1,8 @@
 import requests
 import base64
-TMBD_KEY = 'f3b51c649d284fc47202a5a3e67c458d'
-SPOTIFY_CLIENT_ID = '87fd8a956ad845fdb8a3f71547ad1f94'
-SPOTIFY_CLIENT_SECRET = 'ec0034846f7749a4880a101b285ea7f3'
+TMBD_KEY = ''
+SPOTIFY_CLIENT_ID = ''
+SPOTIFY_CLIENT_SECRET = ''
 
 def get_trending_movies(type='day', lang='en-US'):
 
@@ -10,7 +10,7 @@ def get_trending_movies(type='day', lang='en-US'):
 
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
 
     response = requests.get(url, headers=headers).json()
@@ -22,7 +22,7 @@ def get_movie_credits(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}/credits?language=en-US"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
 
     response = requests.get(url, headers=headers).json()

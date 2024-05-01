@@ -9,7 +9,7 @@ def create_session():
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
 
     response = requests.post(url, json=payload, headers=headers).json()
@@ -27,7 +27,7 @@ def create_list(session_id):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
     response = requests.post(url, json=payload, headers=headers).json()
 
@@ -42,7 +42,7 @@ def add_movie_to_list(list_id, session_id):
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
 
     response = requests.post(url, json=payload, headers=headers)
@@ -54,7 +54,7 @@ def delete_list(list_id,session_id):
 
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2I1MWM2NDlkMjg0ZmM0NzIwMmE1YTNlNjdjNDU4ZCIsInN1YiI6IjY2MmU3N2Y0ZTMzZjgzMDEyMjIxYWI0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.me9eMxA4uA55xMH2ZRaiAR66ySFrG_m5Ps_DcLOiDJw"
+        "Authorization": "Bearer "
     }
     response = requests.delete(url, headers=headers).json()
 
