@@ -1,5 +1,6 @@
 import requests
 import base64
+import json
 SPOTIFY_CLIENT_ID = '87fd8a956ad845fdb8a3f71547ad1f94'
 SPOTIFY_CLIENT_SECRET = 'ec0034846f7749a4880a101b285ea7f3'
 
@@ -39,7 +40,8 @@ def get_artist_tracks(bearer,artist_id):
         "Content-Type" : "application/json"
     }
     response = requests.get(url, headers=headers).json()
-    #print(response)
+    # pretty_response = json.dumps(response, indent=4)
+    # print(pretty_response)
     return [x['id'] for x in response['tracks'][:1]]
 
 def get_track(bearer, track_id):
