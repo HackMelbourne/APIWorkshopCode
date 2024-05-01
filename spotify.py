@@ -49,7 +49,7 @@ def get_track(bearer, track_id):
         "Content-Type" : "application/json"
     }
     response = requests.get(url, headers=headers).json()
-    return response['name']
+    return response['album']['name']
 
 spotify_token = get_spotify_req_token()
 spotify_artist_id = search_spotify(spotify_token, 'drake')
